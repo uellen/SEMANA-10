@@ -18,16 +18,20 @@ void imprime_mat(int mat[][MAX], int n){
     }
 }
 bool permutacao (int mat[][MAX] , int n){
+    int soma = 0;
     for(int i=0; i<n; i++){
         for (int j = 0; j<n; j++){
-            if(mat[i][j] != 0 || mat[i][j] != 1){
+            if(mat[i][j] != 0 && mat[i][j] != 1){
                 return false;
             }
-            else{
-                //colocar aqui a logica
-            }
+                soma += mat[j][j];
         }
+
     }
+    if(soma != n){
+        return true;
+    }
+    return false;
 }
 int main () {
     int n;
