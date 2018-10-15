@@ -22,10 +22,11 @@ void maiores (int mat[][MAX], int nl, int nc, int vet[]){
     for (int j = 0; j < nc ; j++){
         for (int i = 0; i < nl ; i++){
             if(mat[i][j] > maior){
-                vet[j] = mat[i][j];
+                maior = mat[i][j];
             }
-            maior = 0;
+            vet[j] = maior;
         }
+         maior = 0;
     }
 }
 void imprimir_vetor (int vet[MAX],int n){
